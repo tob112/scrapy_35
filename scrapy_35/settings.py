@@ -11,6 +11,8 @@
 
 BOT_NAME = 'scrapy_35'
 
+LOG_LEVEL = 'ERROR'
+
 SPIDER_MODULES = ['scrapy_35.spiders']
 NEWSPIDER_MODULE = 'scrapy_35.spiders'
 
@@ -64,9 +66,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'scrapy_35.pipelines.Scrapy35Pipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'scrapy_35.pipelines.JsonWriterPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

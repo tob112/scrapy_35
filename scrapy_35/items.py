@@ -8,7 +8,8 @@
 import scrapy
 
 
-class Scrapy35Item(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class Identity(scrapy.Item):
+    email_adress = scrapy.Field()
+    password = scrapy.Field()
+    found_at = scrapy.Field()
+    found_url = scrapy.Field()
